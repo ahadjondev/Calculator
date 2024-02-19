@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #536DFE, #9E9E9E); /* Muted Blue to Gray gradient */
+}
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: min-max(120px, auto) repeat(5, 100px);
+    grid-gap: 5px; 
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    height: 80px;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9); 
+}
+
+.span-two {
+    grid-column: span 2;
+}
+ 
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(21, 86, 216, 0.456);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+
+.output .previous-operand,
+.output .current-operand {
+    width: 100%;
+    min-width: 120px; /* Set a minimum width */
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+#text {
+    text-align: center;
+    color: aliceblue;
+    height: 10px;
+}
+#text > a {
+    color: wheat;
+}
