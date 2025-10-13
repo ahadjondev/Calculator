@@ -10,7 +10,7 @@ class Calculator {
         this.previousOperand = ''
         this.operation = undefined
     }
-
+   
     delete() {
         // Implement delete functionality 
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
